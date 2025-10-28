@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - CodeMind</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      /*animation: fadeIn 1.5s ease-in;*/
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #000000b0;
+   }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    p{
+      font-size: 1.3rem;
+    }
+    nav {
+      background: rgb(9, 2, 65);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+      flex: 1; /* This makes the container grow to fill available space */
+    }
+
+    .section {
+      flex: 1;
+      min-width: 300px;
+      max-width: 30%;
+      background: white;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: slideUp 1s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(20px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 9px 0;
+      font-size: 1.3rem;
+    }
+
+    footer {
+      background: rgb(9, 2, 65);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Team</a>
+    <a href="#">Portfolio</a>
+    <a href="">About us</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="section">
+      <h2>About Us</h2>
+      <p>We are <strong>CodeMind</strong>, a dynamic technology company dedicated to solving your toughest problems through the power of diverse programming.</p>
+      <p>We believe that no single language holds the key to every challenge, which is why our team of expert developers is proficient across a wide spectrum of technology.</p>
+      <h3>Our Philosophy: Polyglot Problem-Solving</h3>
+      <p>Our approach is not limited to a single stack; instead, we select the absolute best language, framework, and tool for the specific requirements of your project.</p>
+    </div>
+
+    <div class="section">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Software Development</li>
+        <li>Cyber Security</li>
+        <li>Cloud Solution</li>
+        <li>IT Consulting</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Head of Departments</h2>
+      <ul>
+        <li>Muteeba Jamin Mathew - Reg No: 25/BCC/BU/R/1002</li>
+        <li>Mayanja Asah - Reg No: 25/BSE/BU/R/1004</li>
+        <li>Kamondo Kipimo Augustin - Reg No: [Not Provided]</li>
+        <li>Kimbugwe Rogers - Reg No: 25/BSE/BU/R/1002</li>
+        <li>Njuki Joash - Reg No: 25/BSE/BU/R/1007</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Follow us on</p>
+    <div class="social-icons">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+    </div>
+    <p>&copy; 2025 CodeMind. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+ 
