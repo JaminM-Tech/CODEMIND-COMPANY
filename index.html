@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - CodeMind</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(to right, #1a2a6c, #fdbb2d);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .member-img {
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-member:hover .member-img img {
+            transform: scale(1.05);
+        }
+        
+        .member-info {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .member-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #1a2a6c;
+        }
+        
+        .member-role {
+            color: #fdbb2d;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .member-desc {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #f1f1f1;
+            color: #1a2a6c;
+            transition: all 0.3s ease;
+        }
+        .social-links img{
+            width: 40px;
+            height: 40px;
+        }
+        
+        .social-links a:hover {
+            background-color: #1a2a6c;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Values Section */
+        .values {
+            background-color: #1a2a6c;
+            color: white;
+        }
+        
+        .values .section-title h2 {
+            color: white;
+        }
+        
+        .values .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fdbb2d;
+        }
+        
+        .value-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .value-desc {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fdbb2d, #b21f1f);
+            color: white;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #1a2a6c;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0d1b4c;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #fdbb2d;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .member-img {
+                height: 240px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">CodeMind</div>
+            <p class="tagline">Transforming ideas into digital reality with a team of passionate developers and designers</p>
+        </div>
+    </header>
+    
+    <section class="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>The brilliant minds behind CodeMind's success</p>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="Mathew.jpg" alt="Muteeba Jamin Mathew">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Muteeba Jamin Mathew</h3>
+                        <p class="member-role">CEO & Lead Developer</p>
+                        <p class="member-desc">Mathew founded CodeMind with a vision to create exceptional digital experiences. With over 10 years in web development.</p>
+                        <div class="social-links">
+                            <a href="#"><img src="facebook.png"></a>
+                            <a href="#"><img src="whatsapp.png"></a>
+                            <a href="#"><img src="github.png"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="Joash.jpg" alt="Njuki Joash">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Njuki Joash</h3>
+                        <p class="member-role">Creative Director</p>
+                        <p class="member-desc">Joash brings designs to life with her exceptional UI/UX skills and creative vision that pushes boundaries.</p>
+                        <div class="social-links">
+                            <a href="#"><img src="facebook.png"></a>
+                            <a href="#"><img src="whatsapp.png"></a>
+                            <a href="#"><img src="github.png"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="Rogers.jpg" alt="Kimbugwe Rogers">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Kimbugwe Rogers</h3>
+                        <p class="member-role">Full Stack Developer</p>
+                        <p class="member-desc">Rogers specializes in building robust backend systems and seamless frontend interfaces.</p>
+                        <div class="social-links">
+                            <a href="#"><img src="facebook.png"></a>
+                            <a href="#"><img src="whatsapp.png"></a>
+                            <a href="#"><img src="github.png"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="Asah.jpg" alt="Mayanja Asah">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Mayanja Asah</h3>
+                        <p class="member-role">Frontend Developer</p>
+                        <p class="member-desc">Asah creates responsive, accessible, and beautiful user interfaces with modern technologies.</p>
+                        <div class="social-links">
+                            <a href="#"><img src="facebook.png"></a>
+                            <a href="#"><img src="whatsapp.png"></a>
+                            <a href="#"><img src="github.png"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="Augustin.jpg" alt="Kamondo Augustin Kipimo">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name"></h3>
+                        <p class="member-role">Kamondo Augustin Kipimo</p>
+                        <p class="member-desc">Augustin ensures projects are delivered on time and exceed client expectations with his organizational skills.</p>
+                        <div class="social-links">
+                            <a href="#"><img src="facebook.png"></a>
+                            <a href="#"><img src="whatsapp.png"></a>
+                            <a href="#"><img src="github.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Values</h2>
+                <p>The principles that guide everything we do at CodeMind</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">💡</div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p class="value-desc">We constantly explore new technologies and approaches to deliver cutting-edge solutions.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <h3 class="value-title">Collaboration</h3>
+                    <p class="value-desc">We believe the best results come from working closely with our clients and each other.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">⚡</div>
+                    <h3 class="value-title">Efficiency</h3>
+                    <p class="value-desc">We optimize our processes to deliver high-quality work within agreed timelines.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">❤️</div>
+                    <h3 class="value-title">Passion</h3>
+                    <p class="value-desc">We love what we do, and it shows in the quality and creativity of our work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's collaborate to bring your vision to life with our expertise and passion for web development.</p>
+            <a href="#" class="btn">Get in Touch</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">CodeMind</div>
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+                <p class="copyright">&copy; 2023 CodeMind. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
