@@ -257,3 +257,250 @@ footer {
   color: #bbb;
   font-size: 0.9rem;
 }
+
+/* Media Queries for Responsive Design */
+
+/* Tablets and small desktops */
+@media screen and (max-width: 1024px) {
+  .navbar > ul > li {
+    margin: 0 10px;
+  }
+  
+  .navbar ul li a {
+    width: 90px;
+    padding: 8px 8px;
+  }
+  
+  .home-page-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .home-image01 img {
+    width: 350px;
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 60px;
+    flex-direction: column;
+    padding: 10px 0;
+    height: auto;
+  }
+  
+  .logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  
+  .logo h2,
+  .logo1 {
+    font-size: 24px;
+  }
+  
+  .logo-image img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .navbar > ul > li {
+    margin: 0 8px;
+  }
+  
+  .navbar ul li a {
+    width: 80px;
+    font-size: 0.9em;
+    padding: 6px 6px;
+  }
+  
+  .home-page-content {
+    padding: 40px 15px;
+  }
+  
+  .home-page-content h1 {
+    font-size: 2rem;
+  }
+  
+  .home-page-content p {
+    font-size: 0.9rem;
+  }
+  
+  .home-image01 img {
+    width: 300px;
+    height: 220px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-column {
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 8px 0;
+  }
+  
+  .logo {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo-image {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  
+  .logo-text {
+    flex-direction: column;
+  }
+  
+  .logo h2,
+  .logo1 {
+    font-size: 20px;
+  }
+  
+  .navbar > ul > li {
+    margin: 0 5px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .navbar ul {
+    padding: 0;
+  }
+  
+  .navbar ul li a {
+    width: 70px;
+    font-size: 0.8em;
+    padding: 5px 5px;
+    display: block;
+  }
+  
+  .home-page-content {
+    padding: 30px 10px;
+  }
+  
+  .home-page-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .home-page-content p {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .home-image01 img {
+    width: 250px;
+    height: 180px;
+  }
+  
+  .footer-content {
+    padding: 0 10px;
+  }
+  
+  .social-links {
+    gap: 10px;
+  }
+  
+  .social-links a {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+    padding: 15px 10px 0;
+  }
+}
+
+/* Very small mobile devices */
+@media screen and (max-width: 320px) {
+  .navbar > ul > li {
+    margin: 0 3px;
+  }
+  
+  .navbar ul li a {
+    width: 60px;
+    font-size: 0.7em;
+    padding: 4px 4px;
+  }
+  
+  .home-page-content h1 {
+    font-size: 1.3rem;
+  }
+  
+  .home-image01 img {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .logo h2,
+  .logo1 {
+    font-size: 18px;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  header {
+    position: relative;
+  }
+  
+  .home-page-content {
+    padding: 20px 15px;
+  }
+  
+  .home-page-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+}
+
+/* High-resolution displays */
+@media screen and (min-resolution: 192dpi) {
+  .logo-image img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Print styles */
+@media print {
+  header {
+    position: static;
+  }
+  
+  .navbar ul li a:hover {
+    border-bottom: none;
+    color: black;
+  }
+  
+  .btn {
+    border: 1px solid black;
+  }
+  
+  footer {
+    background: white;
+    color: black;
+  }
+  
+  .footer-column h3 {
+    color: black;
+  }
+  
+
+}

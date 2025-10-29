@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Codemind</title>
+  <style>
+    /* Basic layout from your site */
+
+    header {
+     background: #0077ff;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgb(255, 172, 6);
+}
+.navbar > ul > li {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: small;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-weight: bold;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, font-weight 0.3s ease, font-size 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  line-height: 1.5;
+}
+.navbar ul li a:hover {
+  color: rgb(255, 172, 6);
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+  height: auto;
+  line-height: auto;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid rgb(255, 172, 6);
+  font-size: large;
+}
+.navbar ul li a:active {
+  color: rgb(255, 172, 6);
+  font-size: large;
+}
+.content {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: #e8f2ff; /* Light blue background */
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Contact container */
+    .contact-container {
+      background: #f5f9ff;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      width: 90%;
+      overflow: hidden;
+    }
+
+    /* Left section */
+    .contact-info {
+      flex: 1;
+      background: linear-gradient(135deg, #0077ff, #004aad);
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .contact-info h1 {
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .info-item {
+      margin: 8px 0;
+    }
+
+    /* Right section */
+    .contact-form {
+      flex: 1;
+      padding: 40px;
+      text-align: left;
+    }
+
+    .contact-form h2 {
+      color: #004aad;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0077ff;
+      outline: none;
+    }
+
+    button {
+      background: #0077ff;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #005fd1;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 800px) {
+      .contact-container {
+        flex-direction: column;
+      }
+      .contact-info, .contact-form {
+        padding: 30px;
+        text-align: center;
+      }
+      .contact-info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <nav class="navbar">
+        <ul>
+          <li><a href="../CodeMind-Company/home-page.html"> Home </a></li>
+          <li><a href="../CodeMind-Company/about.html"> About Us </a></li>
+          <li><a href="../CodeMind-Company/service.html"> Services </a></li>
+          <li><a href="../CodeMind-Company/index.html"> Our team </a></li>
+          <li><a class="active" href=""> Contact us</a></li>
+        </ul>
+      </nav>
+  </header>    
+<div class="contact">
+  <div class="contact-container">
+    <div class="contact-info">
+      <h1>Get in Touch</h1>
+      <p>Have a question or project in mind? Let’s build something great together!</p>
+      <div class="info-item"><strong>📧 Email:</strong> codemind@gmail.com</div>
+      <div class="info-item"><strong>📞 Tel:</strong> +256-754425512</div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -5,6 +5,59 @@ body{
     color: #fffffF;
 }
 
+.navbar > ul > li {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: small;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-weight: bold;
+}
+.header-nav{
+  background-color: #1e5fa3;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgb(255, 172, 6);
+  text-align: center;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, font-weight 0.3s ease, font-size 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  line-height: 1.5;
+}
+.navbar ul li a:hover {
+  color: rgb(255, 172, 6);
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+  height: auto;
+  line-height: auto;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid rgb(255, 172, 6);
+  font-size: large;
+}
+.navbar ul li a:active {
+  color: rgb(255, 172, 6);
+  font-size: large;
+}
+
 header{
     text-align: center;
     padding: 60px 20px;
@@ -46,6 +99,7 @@ header p{
     color: #ffde59;
     margin-bottom: 10px;
 }
+
 
 footer_{
     text-align: center;
